@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=0">
+<title>Crypto Mobile Template</title>
+
+<!-- Google font file. If you want you can change. -->
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900"
+	rel="stylesheet">
+
+<!-- Fontawesome font file css -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+<!-- Animate css file for css3 animations. for more : https://daneden.github.io/animate.css -->
+<!-- Only use animate action. If you dont use animation, you don't have to add.-->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
+<link rel="stylesheet" type="text/css" href="plugins/c3-chart/c3.css">
+
+<!-- Template global css file. Requared all pages -->
+<link rel="stylesheet" type="text/css" href="css/global.style.css">
+
+<!-- Swiper slider css file -->
+<link rel="stylesheet" href="css/swiper.min.css">
+
+<!--turbo slider plugin css file -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="plugins/turbo-slider/turbo.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper ">
+		<div class="wrapper-inline">
+			<!-- Page content start -->
+			<main class="margin mt-0">
+
+			<div class="dash-balance">
+				<div class="dash-content relative">
+					<h3 class="w-text">예상연체내역</h3>
+				</div>
+			</div>
+			<section class="bal-section container">
+				<div class="balance-card mb-15">
+					<div class="d-flex align-items-center">
+						<div class="d-flex flex-grow">
+							<div class="mr-auto">
+								<h1 class="b-val" id="overdueAmt"></h1>
+								<p class="g-text mb-10">예상필요 금액</p>
+								<div class="badge badge-pill" id="expect"></div>
+								<div class="badge badge-pill" id="view_detail">
+									상세내역 보기 <i class="fa fa-plus ml-10"></i>
+								</div>
+							</div>
+							<div class="ml-auto align-self-end">
+								<div id="sparkline1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="wallets-list container">
+				<!--expendable list item -->
+				<div class="expandable-item accordion active"
+					data-group="accordion1" id="detail">
+						<div class="padding-content">
+							<h4>다음 결제일까지 예상되는 고객님의 고정비용</h4>
+							<div class="recent-trans">
+
+								<ul class="dropdown-menu-list list-unstyled no-mb"
+									id="overdueDetail">
+								</ul>
+								<section class="container">
+									<div class="content">
+										<h4 class="title-main">고정비용 비율</h4>
+
+										<div class="c-panel pl-0">
+
+											<div class="row align-items-center">
+												<div class="col-12">
+													<div class="advertising-wrapper">
+														<div id="donutChart"></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+				</div>
+			</section>
+			</main>
+			<section class="wallets-list container">
+				<!--expendable list item -->
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+
+							<button class="crypto-b round" onClick="location.href='/'">
+								> <i class="cc XPM"></i>
+								<div class="ml-10">
+									<h4 class="coin-name">대납취소</h4>
+								</div>
+							</button>
+						</div>
+						<div class="swiper-slide">
+							<button class="crypto-b hot" id="go_to_options_btn">
+								<i class="cc DAO"></i>
+								<div class="ml-10">
+									<h4 class="coin-name">대납수단선택</h4>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Page content end -->
+		</div>
+	</div>
+
+	<!-- JQuery library file. requared all pages -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/overdue.js"></script>
+
+	<!-- Swiper JS -->
+	<script src="js/swiper.min.js"></script>
+
+	<!-- Template global script file. requared all pages -->
+	<script src="js/app-charts.js"></script>
+	<script src="js/global.script.js"></script>
+
+	<!-- Flot Charts -->
+	<script src="plugins/c3-chart/c3.min.js"></script>
+	<script src="plugins/c3-chart/d3.min.js"></script>
+	<script src="plugins/c3-chart/c3.custom.js"></script>
+	<form id="go_to_options_form" action="/options" method="POST">
+		<input type="hidden" name="options_param" id="options_param">
+	</form>
+</body>
+
+</html>

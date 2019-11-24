@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=0">
+<title>Crypto Mobile Template</title>
+
+<!-- Google font file. If you want you can change. -->
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900"
+	rel="stylesheet">
+
+<!-- Fontawesome font file css -->
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+<!-- Animate css file for css3 animations. for more : https://daneden.github.io/animate.css -->
+<!-- Only use animate action. If you dont use animation, you don't have to add.-->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
+<link rel="stylesheet" type="text/css" href="plugins/c3-chart/c3.css">
+
+<!-- Template global css file. Requared all pages -->
+<link rel="stylesheet" type="text/css" href="css/global.style.css">
+
+<!-- Swiper slider css file -->
+<link rel="stylesheet" href="css/swiper.min.css">
+
+<!--turbo slider plugin css file -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="plugins/turbo-slider/turbo.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper ">
+		<div class="wrapper-inline">
+			<!-- Page content start -->
+			<main class="margin mt-0">
+
+			<div class="dash-balance">
+				<div class="dash-content relative">
+					<h3 class="w-text">대납가능한 고객님의 금융자산</h3>
+					<img src="img/content/ref-icon3.png" class="img-xs" alt="">
+					<h1 class="mt-10 mb-5" id="result" style="color:white;"></h1>
+				</div>
+			</div>
+
+			<div class="ref-card c1">
+				<div class="d-flex align-items-center">
+					<div class="d-flex flex-grow">
+						<div class="mr-auto">
+							<h1 class="b-val">외화 계좌 현황</h1>
+							<h2 id="exchangeAmt" class="b-val"></h2>
+							<p id="dollar" class="g-text mb-10"></p>
+							<div id="exchangeRate" class="badge badge-pill">
+							<i class="txt-green fa fa-arrow-up ml-10"></i>
+							</div>
+							<div class="badge badge-pill" id="for_detail">
+								상세내역 보기 <i class="fa fa-plus ml-10"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="recent-trans" id="detail1">
+				<ul class="dropdown-menu-list list-unstyled no-mb" id="foreignList">
+				</ul>
+			</div>
+			<!--expendable list item -->
+			<div class="ref-card c2">
+				<div class="d-flex align-items-center">
+					<div class="d-flex flex-grow">
+						<div class="mr-auto">
+							<h1 class="b-val">대출 가능 금액</h1>
+							<h2 id="loanAmt" class="b-val"></h2>
+							<p id="loanRate" class="g-text mb-10">대출 금리는 상세보기를 통해 보실 수
+								있습니다.</p>
+							<div class="badge badge-pill" id="loanRate">
+								금융자산담보 대출 <i class="txt-green fa fa-arrow-up ml-10"></i>
+							</div>
+							<div class="badge badge-pill" id="loan_detail">
+								상세내역 보기 <i class="fa fa-plus ml-10"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="recent-trans" id="detail2">
+				<ul class="dropdown-menu-list list-unstyled no-mb" id="loan_list">
+				</ul>
+			</div>
+			<!--expendable list item -->
+			<div class="ref-card c3">
+				<div class="d-flex align-items-center">
+					<div class="d-flex flex-grow">
+						<div class="mr-auto">
+							<h1 class="b-val">현금 서비스 & 리볼빙</h1>
+							<h2 id="cashAmt" class="b-val"></h2>
+							<p id="cashRate" class="g-text mb-10">대출 금리는 상세보기를 통해 보실 수
+								있습니다.</p>
+							<div class="badge badge-pill" id="cardService_detail">
+								상세내역 보기 <i class="fa fa-plus ml-10"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="recent-trans" id="detail3">
+				<ul class="dropdown-menu-list list-unstyled no-mb" id="cash_list">
+				</ul>
+			</div>
+			<div class="resources-card-wrapper">
+				<div class="d-flex flex-column ml-md-10">
+					<a href="#" class="button circle block orange" id="apply">선택한 내역으로 신청하기</a>
+				</div>
+			</div>
+			<!--expendable list item --> </main>
+			<!-- Page content end -->
+		</div>
+	</div>
+
+	<!-- JQuery library file. requared all pages -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/options.js"></script>
+
+	<!-- Swiper JS -->
+	<script src="js/swiper.min.js"></script>
+
+	<!-- Initialize Swiper -->
+
+	<!-- c3 Charts -->
+	<script src="plugins/c3-chart/c3.min.js"></script>
+	<script src="plugins/c3-chart/d3.min.js"></script>
+	<script src="plugins/c3-chart/c3.custom.js"></script>
+	<!-- Flot Charts -->
+	<script src="plugins/flot/jquery.flot.min.js"></script>
+	<script src="plugins/flot/jquery.flot.time.min.js"></script>
+	<script src="plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="plugins/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="plugins/flot/jquery.flot.resize.min.js"></script>
+	<!-- Sparkline-->
+	<script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+
+	<!-- Template global script file. requared all pages -->
+	<script src="js/app-charts.js"></script>
+	<script src="js/global.script.js"></script>
+
+
+	<input id="overdue_amt" type="hidden" th:value="${amt}" />
+</body>
+
+</html>
