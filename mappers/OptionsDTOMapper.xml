@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ 
+<mapper namespace="com.shinhan.hackathon.dto.OptionsDTO"> 
+    <select id="selectAllForeignAccount" parameterType="String" resultType="ForeignAccountVO"> 
+        SELECT * FROM foreign_account 
+        WHERE username = #{username}
+    </select> 
+    
+    <select id="selectAllLoan" parameterType="String" resultType="LoanVO"> 
+        SELECT * FROM loan 
+        WHERE username = #{username}
+    </select> 
+    
+    <select id="selectAllCash" parameterType="String" resultType="CashVO"> 
+        SELECT * FROM cash 
+        WHERE username = #{username}
+    </select> 
+     
+</mapper> 

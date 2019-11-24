@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ 
+<mapper namespace="com.shinhan.hackathon.dto.OverdueListDTO"> 
+    <select id="selectAllAVGCharge" parameterType="String" resultType="AVGChargeVO"> 
+        SELECT * FROM avg_charge 
+        WHERE username = #{username}
+    </select> 
+    
+    <insert id="insertAVGCharge" parameterType="AVGChargeVO">
+    	 INSERT INTO avg_charge VALUES ((SELECT IFNULL(MAX(a.num),0)+1 FROM avg_charge a), #{loan_settlement}, #{electric_charges}, #{netflix}, #{monthly_rent}, #{gas_bill}, #{car_tax}, #{insurance_fee}, #{automatic_withdrawal}, #{username}) 
+    </insert>
+    
+    <update id="updateAVGCharge" parameterType="AVGChargeVO"> 
+        UPDATE avg_charge SET loan_settlement = #{loan_settlement}, electric_charges = #{electric_charges}, netflix = #{netflix}, monthly_rent = #{monthly_rent}, gas_bill = #{gas_bill}, car_tax = #{car_tax}, insurance_fee = #{insurance_fee}, automatic_withdrawal = #{automatic_withdrawal} WHERE username = #{username}
+    </update> 
+</mapper> 
