@@ -1,0 +1,21 @@
+2019-11-24 12:58:48.121  INFO 2107 --- [restartedMain] c.s.hackathon.ShhacPrdWasApplication     : Starting ShhacPrdWasApplication on JONGHWAui-MacBook-Pro.local with PID 2107 (/Users/yameharry/git/shhac-prd-was/target/classes started by yameharry in /Users/yameharry/git/shhac-prd-was)
+2019-11-24 12:58:48.123  INFO 2107 --- [restartedMain] c.s.hackathon.ShhacPrdWasApplication     : No active profile set, falling back to default profiles: default
+2019-11-24 12:58:48.155  INFO 2107 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-24 12:58:48.155  INFO 2107 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-24 12:58:48.677  WARN 2107 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shinhan.hackathon]' package. Please check your configuration.
+2019-11-24 12:58:49.075  INFO 2107 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-11-24 12:58:49.090  INFO 2107 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-24 12:58:49.090  INFO 2107 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-11-24 12:58:49.149  INFO 2107 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-24 12:58:49.150  INFO 2107 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 995 ms
+2019-11-24 12:58:49.471  INFO 2107 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-24 12:58:49.542  WARN 2107 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-24 12:58:49.650  INFO 2107 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-11-24 12:58:49.732  INFO 2107 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-24 12:58:49.777  INFO 2107 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-11-24 12:58:49.781  INFO 2107 --- [restartedMain] c.s.hackathon.ShhacPrdWasApplication     : Started ShhacPrdWasApplication in 1.969 seconds (JVM running for 2.587)
+2019-11-24 13:02:58.076  INFO 2107 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-24 13:02:58.078  INFO 2107 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-24 13:02:58.100  INFO 2107 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-11-24 13:29:33.185  INFO 2107 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-24 13:29:33.210  INFO 2107 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
